@@ -4,8 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Contact from "./pages/Contact";
-import MacBookPro141 from "./pages/MacBookPro141";
+import HotelsPage from "./pages/HotelsPage";
 import { useEffect } from "react";
 
 function App() {
@@ -29,10 +28,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/macbook-pro-14-1":
-        title = "";
-        metaDescription = "";
-        break;
     }
 
     if (title) {
@@ -51,9 +46,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Contact />} />
-
-      <Route path="/macbook-pro-14-1" element={<MacBookPro141 />} />
+      <Route path="/" element={<HotelsPage />} />
     </Routes>
   );
 }
