@@ -1,27 +1,30 @@
 import { FunctionComponent, useState, useCallback } from "react";
 import { TextField } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import MatterhornPopup from "../components/MatterhornPopup";
 import PortalPopup from "../components/PortalPopup";
 import styles from "./HotelsPage.module.css";
 
 const HotelsPage: FunctionComponent = () => {
+  const navigate = useNavigate();
   const [isMatterhornPopupOpen, setMatterhornPopupOpen] = useState(false);
+  const [isMatterhornPopup1Open, setMatterhornPopup1Open] = useState(false);
 
   const onWebScreenClick = useCallback(() => {
-    // Please sync "Homepage" to the project
-  }, []);
+    navigate("/");
+  }, [navigate]);
 
   const onFickleflightLogoContainerClick = useCallback(() => {
-    // Please sync "Homepage" to the project
-  }, []);
+    navigate("/");
+  }, [navigate]);
 
   const onExploreTextClick = useCallback(() => {
-    // Please sync "Homepage" to the project
-  }, []);
+    navigate("/");
+  }, [navigate]);
 
   const onSearchTextClick = useCallback(() => {
-    // Please sync "Results Page" to the project
-  }, []);
+    navigate("/results-page");
+  }, [navigate]);
 
   const openMatterhornPopup = useCallback(() => {
     setMatterhornPopupOpen(true);
@@ -29,6 +32,14 @@ const HotelsPage: FunctionComponent = () => {
 
   const closeMatterhornPopup = useCallback(() => {
     setMatterhornPopupOpen(false);
+  }, []);
+
+  const openMatterhornPopup1 = useCallback(() => {
+    setMatterhornPopup1Open(true);
+  }, []);
+
+  const closeMatterhornPopup1 = useCallback(() => {
+    setMatterhornPopup1Open(false);
   }, []);
 
   return (
@@ -72,7 +83,7 @@ const HotelsPage: FunctionComponent = () => {
                   src="../notification1.svg"
                 />
                 <img
-                  className={styles.unsplashd1UPkiFd04AIcon}
+                  className={styles.unsplashd1upkifd04aIcon}
                   alt=""
                   src="../top_avatar@2x.png"
                 />
@@ -85,12 +96,10 @@ const HotelsPage: FunctionComponent = () => {
             <img
               className={styles.bannerBackground}
               alt=""
-              src="../banner-background@2x.png"
+              src="../banner-background1@2x.png"
             />
             <div className={styles.title}>
-              <div className={styles.staysInLosAngeles}>
-                Stays in Los Angeles
-              </div>
+              <div className={styles.staysInLos}>Stays in Los Angeles</div>
               <div className={styles.options}>
                 <div className={styles.pilldefault}>
                   <div className={styles.beds}>Recommended</div>
@@ -137,15 +146,16 @@ const HotelsPage: FunctionComponent = () => {
                           <img
                             className={styles.vectorIcon}
                             alt=""
-                            src="../vector.svg"
+                            src="../vector7.svg"
                           />
                         </div>
                       </div>
                     </div>
                     <img
-                      className={styles.notificationBellIcon}
+                      className={styles.videoIcon}
                       alt=""
-                      src="../video.svg"
+                      src="../video2.svg"
+                      onClick={openMatterhornPopup}
                     />
                   </div>
                   <div className={styles.priceAndCta}>
@@ -154,7 +164,7 @@ const HotelsPage: FunctionComponent = () => {
                       <div className={styles.night}>/night</div>
                     </div>
                     <button className={styles.viewDetailsButton}>
-                      <div className={styles.rectangleDiv} />
+                      <div className={styles.viewDetailsButtonChild} />
                       <div className={styles.searchFlights}>View Details</div>
                     </button>
                   </div>
@@ -167,7 +177,7 @@ const HotelsPage: FunctionComponent = () => {
                   src="../unsplashs6ch7n3eoqy1@2x.png"
                 />
                 <div className={styles.resultsDetails1}>
-                  <div className={styles.resultsTitle1}>
+                  <div className={styles.resultsSumamry}>
                     <div className={styles.result}>
                       <b className={styles.freehandLosAngeles}>
                         Freehand Los Angeles
@@ -180,7 +190,7 @@ const HotelsPage: FunctionComponent = () => {
                           <img
                             className={styles.vectorIcon}
                             alt=""
-                            src="../vector1.svg"
+                            src="../vector8.svg"
                           />
                         </div>
                       </div>
@@ -192,7 +202,7 @@ const HotelsPage: FunctionComponent = () => {
                       <div className={styles.night}>/night</div>
                     </div>
                     <button className={styles.viewDetailsButton}>
-                      <div className={styles.rectangleDiv} />
+                      <div className={styles.viewDetailsButtonChild} />
                       <div className={styles.searchFlights}>View Details</div>
                     </button>
                   </div>
@@ -205,7 +215,7 @@ const HotelsPage: FunctionComponent = () => {
                   src="../unsplashs6ch7n3eoqy2@2x.png"
                 />
                 <div className={styles.resultsDetails1}>
-                  <div className={styles.resultsTitle1}>
+                  <div className={styles.resultsSumamry}>
                     <div className={styles.result}>
                       <b className={styles.freehandLosAngeles}>
                         The Westin Bonavent...
@@ -218,7 +228,7 @@ const HotelsPage: FunctionComponent = () => {
                           <img
                             className={styles.vectorIcon}
                             alt=""
-                            src="../vector2.svg"
+                            src="../vector9.svg"
                           />
                         </div>
                       </div>
@@ -230,7 +240,7 @@ const HotelsPage: FunctionComponent = () => {
                       <div className={styles.night}>/night</div>
                     </div>
                     <button className={styles.viewDetailsButton}>
-                      <div className={styles.rectangleDiv} />
+                      <div className={styles.viewDetailsButtonChild} />
                       <div className={styles.searchFlights}>View Details</div>
                     </button>
                   </div>
@@ -256,16 +266,16 @@ const HotelsPage: FunctionComponent = () => {
                           <img
                             className={styles.vectorIcon}
                             alt=""
-                            src="../vector3.svg"
+                            src="../vector10.svg"
                           />
                         </div>
                       </div>
                     </div>
                     <img
-                      className={styles.featureVideoIcon}
+                      className={styles.videoIcon}
                       alt=""
-                      src="../video1.svg"
-                      onClick={openMatterhornPopup}
+                      src="../video3.svg"
+                      onClick={openMatterhornPopup1}
                     />
                   </div>
                   <div className={styles.priceAndCta}>
@@ -274,7 +284,7 @@ const HotelsPage: FunctionComponent = () => {
                       <div className={styles.night}>/night</div>
                     </div>
                     <button className={styles.viewDetailsButton}>
-                      <div className={styles.rectangleDiv} />
+                      <div className={styles.viewDetailsButtonChild} />
                       <div className={styles.searchFlights}>View Details</div>
                     </button>
                   </div>
@@ -296,7 +306,7 @@ const HotelsPage: FunctionComponent = () => {
             <img
               className={styles.newsletterSectionBackground}
               alt=""
-              src="../newsletter-section-background@2x.png"
+              src="../newsletter-section-background1@2x.png"
             />
             <div className={styles.subscribeForm}>
               <div className={styles.formHeader}>
@@ -307,7 +317,7 @@ const HotelsPage: FunctionComponent = () => {
               </div>
               <div className={styles.form}>
                 <div className={styles.formText}>
-                  <div className={styles.fillInYourDetailsToJoinT}>
+                  <div className={styles.fillInYour}>
                     Fill in your details to join the party!
                   </div>
                 </div>
@@ -336,7 +346,7 @@ const HotelsPage: FunctionComponent = () => {
                   </div>
                 </div>
                 <button className={styles.button}>
-                  <div className={styles.unstyledButton}>
+                  <div className={styles.unstyledbutton}>
                     <div className={styles.button1}>submit</div>
                   </div>
                 </button>
@@ -344,9 +354,9 @@ const HotelsPage: FunctionComponent = () => {
             </div>
           </div>
           <footer className={styles.footer}>
-            <div className={styles.fickleFlightBio}>
-              <img className={styles.logoIcon} alt="" src="../logo.svg" />
-              <div className={styles.fickleFlightIsYourOneStop}>
+            <div className={styles.fickleflightBio}>
+              <img className={styles.logoIcon} alt="" src="../logo2.svg" />
+              <div className={styles.fickleFlightIs}>
                 Fickle Flight is your one-stop travel portal. We offer hassle
                 free flight and hotel bookings. We also have all your flight
                 needs in you online shop.
@@ -354,7 +364,7 @@ const HotelsPage: FunctionComponent = () => {
               <img
                 className={styles.socialIcons}
                 alt=""
-                src="../social-icons.svg"
+                src="../social-icons2.svg"
               />
             </div>
             <div className={styles.seperator} />
@@ -370,7 +380,7 @@ const HotelsPage: FunctionComponent = () => {
                 <div className={styles.account}>Account</div>
                 <div className={styles.support1}>Support</div>
                 <div className={styles.supportCenter}>Support Center</div>
-                <div className={styles.fAQ}>FAQ</div>
+                <div className={styles.faq}>FAQ</div>
                 <div className={styles.accessibility}>Accessibility</div>
               </div>
               <div className={styles.more}>
@@ -391,6 +401,15 @@ const HotelsPage: FunctionComponent = () => {
           onOutsideClick={closeMatterhornPopup}
         >
           <MatterhornPopup onClose={closeMatterhornPopup} />
+        </PortalPopup>
+      )}
+      {isMatterhornPopup1Open && (
+        <PortalPopup
+          overlayColor="rgba(0, 0, 0, 0.3)"
+          placement="Centered"
+          onOutsideClick={closeMatterhornPopup1}
+        >
+          <MatterhornPopup onClose={closeMatterhornPopup1} />
         </PortalPopup>
       )}
     </>

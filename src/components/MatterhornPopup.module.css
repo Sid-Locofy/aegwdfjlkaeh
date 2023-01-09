@@ -5,7 +5,7 @@
 }
 .matterhornPopup {
   position: relative;
-  border-radius: 8px;
+  border-radius: var(--br-xs);
   background-color: var(--color-white);
   width: 900px;
   display: flex;
@@ -23,7 +23,7 @@
     height: 50.625vw !important;
   }
   .matterhornPopup {
-    padding: 10px;
+    padding: var(--padding-7xs);
     box-sizing: border-box;
   }
 }
