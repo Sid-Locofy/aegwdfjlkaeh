@@ -1,0 +1,53 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-lg);
+  background-color: var(--color-orange-100);
+  width: 65.39px;
+  height: 65.39px;
+}
+.ticketIcon {
+  position: absolute;
+  height: 47.93%;
+  width: 48.38%;
+  top: 26.04%;
+  right: 25.81%;
+  bottom: 26.03%;
+  left: 25.81%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.attractionsIcon {
+  position: relative;
+  width: 65.39px;
+  height: 65.39px;
+}
+.attractions1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.04em;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-600);
+  text-align: center;
+}
+.attractions {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-4xs);
+}
+@media screen and (max-width: 650px) {
+  .attractions {
+    padding-bottom: var(--padding-xs);
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+  }
+}

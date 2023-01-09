@@ -4,6 +4,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import ResultsPage from "./pages/ResultsPage";
 import HotelsPage from "./pages/HotelsPage";
 import { useEffect } from "react";
 
@@ -16,15 +18,22 @@ function App() {
     if (action !== "POP") {
       window.scrollTo(0, 0);
     }
-  }, [action]);
+  }, [action, pathname]);
 
   useEffect(() => {
     let title = "";
     let metaDescription = "";
 
-    //TODO: Update meta titles and descriptions below
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/results-page":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/hotels-page":
         title = "";
         metaDescription = "";
         break;
@@ -46,7 +55,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HotelsPage />} />
+      <Route path="/" element={<Homepage />} />
+
+      <Route path="/results-page" element={<ResultsPage />} />
+
+      <Route path="/hotels-page" element={<HotelsPage />} />
     </Routes>
   );
 }

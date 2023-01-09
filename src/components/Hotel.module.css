@@ -1,0 +1,32 @@
+.hotelIcon {
+  position: relative;
+  width: 65.39px;
+  height: 65.39px;
+}
+.hotel1 {
+  position: relative;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.04em;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-600);
+  text-align: left;
+}
+.hotel {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-4xs);
+}
+@media screen and (max-width: 650px) {
+  .hotel {
+    padding-bottom: var(--padding-xs);
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+  }
+}
