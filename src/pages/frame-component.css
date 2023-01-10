@@ -1,0 +1,33 @@
+.parse-float,
+.parse-int {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-600);
+  width: 606px;
+  height: 125px;
+}
+.parse-int {
+  top: 218px;
+  left: 85px;
+  width: 442px;
+  height: 117px;
+}
+.annotations {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 474px;
+  left: 302px;
+  width: 606px;
+  height: 335px;
+}
+.annotations-parent {
+  position: relative;
+  background-color: var(--studio-darkmode-allwhite-ffffff);
+  width: 100%;
+  height: 1197px;
+  overflow: hidden;
+}
