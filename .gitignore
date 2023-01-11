@@ -1,4 +1,14 @@
 node_modules/
-  .cache/
-  public
-  src/gatsby-types.d.ts
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
